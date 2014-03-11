@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;bucketcs&apos; in &apos;com.iliev.peter.kata.RadixSort24.reset(...)&apos; to &apos;buckets&apos;&#x0D;&#x0A;- Original project: &apos;RadixSort&apos;&#x0D;&#x0A;- Original element: &apos;com.iliev.peter.kata.RadixSort24.reset(List[]).bucketcs&apos;&#x0D;&#x0A;- Renamed element: &apos;bucketcs&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;bucketcs&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;com.iliev.peter.kata{RadixSort24.java[RadixSort24~reset~\[QList;@bucketcs!1044!1064!1057!1064!\[QList;!16!true" name="buckets" references="true" stamp="1385304694801" version="1.0"/>
+</session>

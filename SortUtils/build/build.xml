@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<project name="Bubble Sort Build" default="main" basedir=".">
+	<property file="local.properties" />
+	<property file="${master.properties.file}" />
+	<import file="${master.build.file}" />
+	
+	<!-- Compiles the java code (including the usage of library for JUnit -->
+	<target name="compile" depends="clean, makedir">
+		<javac srcdir="${src.dir}" destdir="${build.dir}">
+		    <classpath>
+				<fileset dir="${ws.axis.jars}" includes="*.jar"/>
+		    	<pathelement path="${ws.stub.client}"/>
+				<pathelement path="${my.path.junit}"/>
+		    	<fileset dir="${my.path.my.jars}" includes="*.jar"/>
+    		</classpath>
+		</javac>
+	</target>
+
+</project>

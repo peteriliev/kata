@@ -1,0 +1,10 @@
+package com.piliev;
+
+public class MyServiceImpl implements MyService {
+
+	@Override
+	public String m1(Foo foo, Bar bar) {
+		return foo.getFoo() + " " + bar.getBar();
+	}
+
+}

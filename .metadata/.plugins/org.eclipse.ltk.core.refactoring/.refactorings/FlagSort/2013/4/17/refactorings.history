@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;endInc&apos; in &apos;com.iliev.peter.kata.FlagSort15.sortInternal(...)&apos; to &apos;endX&apos;&#x0D;&#x0A;- Original project: &apos;FlagSort&apos;&#x0D;&#x0A;- Original element: &apos;com.iliev.peter.kata.FlagSort15.sortInternal(Integer[], int, int, int).endInc&apos;&#x0D;&#x0A;- Renamed element: &apos;endInc&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;endInc&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;com.iliev.peter.kata{FlagSort15.java[FlagSort15~sortInternal~\[QInteger;~I~I~I@endInc!914!929!924!929!I!16!true" name="endX" references="true" stamp="1366748142181" version="1.0"/>
+</session>

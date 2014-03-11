@@ -1,0 +1,11 @@
+package com.piliev;
+
+public class FakeFoo implements Foo {
+
+	@Override
+	public String getFoo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

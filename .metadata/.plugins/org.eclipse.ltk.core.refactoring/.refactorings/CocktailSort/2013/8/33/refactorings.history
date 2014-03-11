@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.iliev.peter.kata.CombSort20&apos; to &apos;CocktailSort20&apos;&#x0D;&#x0A;- Original project: &apos;CocktailSort&apos;&#x0D;&#x0A;- Original element: &apos;com.iliev.peter.kata.CombSort20&apos;&#x0D;&#x0A;- Renamed element: &apos;com.iliev.peter.kata.CocktailSort20&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;CombSort20&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.iliev.peter.kata{CombSort20.java[CombSort20" matchStrategy="1" name="CocktailSort20" qualified="false" references="true" similarDeclarations="false" stamp="1376197874633" textual="false" version="1.0"/>
+</session>

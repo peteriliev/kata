@@ -1,0 +1,11 @@
+package com.piliev;
+
+public class FakeBar implements Bar {
+
+	@Override
+	public String getBar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

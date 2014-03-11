@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Web Service Build" default="java2wsdl" basedir=".">
+	<property file="local.properties" />
+
+	<path id="axis.classpath">
+		<fileset dir="${axis2.path}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<target name="clean">
+		<delete dir="${target.wsdl}" />
+	</target>
+
+	<target name="makedir">
+		<mkdir dir="${target.wsdl}" />
+	</target>
+
+	<target name="java2wsdl" depends="clean, makedir">
+
+		<taskdef name="axis-java2wsdl" classname="org.apache.ws.java2wsdl.Java2WSDLTask"
+			classpathref="axis.classpath" />
+
+		<axis-java2wsdl classpath="${cp.SortUtils};${cp.SortTestSets}"
+			classname="com.iliev.peter.kata.utils.TestSetProvider" />
+
+		<copy todir="${target.wsdl}">
+			<fileset dir=".">
+				<include name="*.wsdl" />
+			</fileset>
+		</copy>
+		<delete>
+			<fileset dir="." includes="*.wsdl" />
+		</delete>
+	</target>
+
+	<target name="service">
+
+		<delete dir="${target.service}" />
+
+		<mkdir dir="${target.service}" />
+
+		<taskdef name="axis-wsdl2java" classname="org.apache.axis2.tool.ant.AntCodegenTask"
+			classpathref="axis.classpath" />
+
+		<axis-wsdl2java
+			wsdlfilename="${target.wsdl}/TestSetProvider.wsdl"
+			packageName="com.iliev.peter.kata.utils"
+			databindingName="adb"
+			syncOnly="true"
+			wsdlVersion="1.6.2"
+			serverSide="true"
+			generateServiceXml="true"
+			output="${target.service}" />
+
+	</target>
+
+	<target name="client">
+
+		<delete dir="${target.client}" />
+
+		<mkdir dir="${target.client}" />
+
+		<taskdef name="axis-wsdl2java" classname="org.apache.axis2.tool.ant.AntCodegenTask"
+			classpathref="axis.classpath" />
+
+		<axis-wsdl2java
+			wsdlfilename="${target.service}/resources/TestSetProvider.wsdl"
+			packageName="com.iliev.peter.kata.stubs"
+			databindingName="adb"
+			syncOnly="true"
+			output="${target.client}" />
+
+	</target>
+
+</project>

@@ -1,0 +1,18 @@
+package com.piliev;
+
+public class MyServiceImpl implements MyService {
+
+	private Foo foo;
+	private Bar bar;
+
+	@Inject
+	public MyServiceImpl(final Foo foo, final Bar bar) {
+		this.foo = foo;
+		this.bar = bar;
+	}
+
+	@Override
+	public String m1() {
+		return foo.getFoo() + " " + bar.getBar();
+	}
+}

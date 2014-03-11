@@ -1,0 +1,12 @@
+package com.piliev;
+
+import com.google.inject.AbstractModule;
+
+public class Module extends AbstractModule {
+
+	@Override
+	protected void configure() {
+		bind(Foo.class).to(FakeFoo.class);
+		bind(Bar.class).to(FakeBar.class);
+	}
+}
