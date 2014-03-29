@@ -1,0 +1,78 @@
+package com.iliev.peter.kata;
+
+import java.util.Arrays;
+import java.util.Collections;
+
+public class FlagSort28 {
+	public static void sort(final Integer[] a)
+	{
+		if (a.length < 2)
+		{
+			return;
+		}
+		
+		final int min = Collections.min(Arrays.asList(a));
+		
+		for (int i = 0; i < a.length; i++)
+		{
+			a[i] -= min;
+		}
+		
+		final int maxLen =getMaxLength(a);
+		final int divisor = (int) Math.pow(10, maxLen - 1);
+		
+		sortInternal(a, 0, a.length, divisor);
+		
+		for (int i = 0; i < a.length; i++)
+		{
+			a[i] += min;
+		}
+	}
+
+	public static void sortInternal(final Integer[] a, final int s, final int e, final int divisor)
+	{
+		final int[] counts = new int[NUM_BUCKETS];
+		for (int i = s; i < e; i++){
+			final int num = getDigit(a[i], divisor);
+			counts[num]++;
+		}
+		
+		final int[] offsets = new int[NUM_BUCKETS];
+		offsets[0] = s;
+		for (int i  = 1; i < NUM_BUCKETS; i++)
+		{
+			offsets[i] = offsets[i - 1] + counts[i -1];
+		}
+		
+	}
+	
+	public static int getMaxLength(final Integer[] a)
+	{
+		if (null == a) {
+			throw new IllegalArgumentException("null");
+		}
+
+		if (a.length == 0) {
+			return 0;
+		}
+
+		final int max = Collections.max(Arrays.asList(a));
+		
+		return (int) Math.log10(max) + 1;
+	}
+
+	private final static int NUM_BUCKETS = 10;
+
+	public static int getDigit(final int num, final int divisor)
+	{
+		if (num < 0) {
+			throw new IllegalArgumentException("num < 0");
+		}
+
+		if (divisor < 1) {
+			throw new IllegalArgumentException("divisor < 0");
+		}
+
+		return (num / divisor) % NUM_BUCKETS;
+	}
+}

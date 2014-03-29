@@ -1,0 +1,14 @@
+package com.iliev.peter.kata;
+
+public class FlagSort28 {
+	public static void sort(final Integer[] a)
+	{
+		
+	}
+
+	public static int getMaxLength(Integer[] integers)
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}
