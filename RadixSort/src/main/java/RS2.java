@@ -1,4 +1,4 @@
-package com.iliev.peter.kata;
+package main.java;
 
 import java.util.ArrayList;
 import java.util.List;

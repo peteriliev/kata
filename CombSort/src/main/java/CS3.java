@@ -1,4 +1,4 @@
-package com.iliev.peter.kata;
+package main.java;
 
 public class CS3 {
 	public static <T extends Comparable<T>> void sort(final T[] a) {

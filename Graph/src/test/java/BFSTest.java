@@ -5,11 +5,11 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
 
-import org.junit.Test;
+import main.java.Graph;
+import main.java.IGraph;
+import main.java.bfs.BFS27;
 
-import com.iliev.peter.kata.Graph;
-import com.iliev.peter.kata.IGraph;
-import com.iliev.peter.kata.bfs.BFS27;
+import org.junit.Test;
 
 public class BFSTest {
 

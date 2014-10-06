@@ -10,7 +10,6 @@
 	<classpathentry kind="src" path="/SortTestSets"/>
 	<classpathentry kind="src" path="/SortUtils"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Guice"/>
-	<classpathentry kind="lib" path="C:/piliev/guice-3.0/guice-3.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>

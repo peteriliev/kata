@@ -5,11 +5,11 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
 
-import org.junit.Test;
+import main.java.Graph;
+import main.java.IGraph;
+import main.java.dfs.DFS27;
 
-import com.iliev.peter.kata.Graph;
-import com.iliev.peter.kata.IGraph;
-import com.iliev.peter.kata.dfs.DFS27;
+import org.junit.Test;
 
 public class DFSTest {
 

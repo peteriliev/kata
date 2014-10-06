@@ -1,4 +1,4 @@
-package com.iliev.peter.kata;
+package main.java;
 
 public final class CocktailSort {
 	public static <T extends Comparable<T>> void sort(T[] a) {

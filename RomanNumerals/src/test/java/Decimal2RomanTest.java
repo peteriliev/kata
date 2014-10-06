@@ -1,11 +1,10 @@
 package com.iliev.peter.kata.test;
 
 import static org.junit.Assert.assertTrue;
+import main.java.Decimal2Roman25;
+import main.java.Decimal2Roman26;
 
 import org.junit.Test;
-
-import com.iliev.peter.kata.Decimal2Roman25;
-import com.iliev.peter.kata.Decimal2Roman26;
 
 public class Decimal2RomanTest {
 

@@ -1,4 +1,4 @@
-package com.iliev.peter.kata;
+package main.java;
 
 public final class QuickSort {
 	private QuickSort() {

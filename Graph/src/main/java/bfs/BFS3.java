@@ -1,9 +1,9 @@
-package com.iliev.peter.kata.bfs;
+package main.java.bfs;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-import com.iliev.peter.kata.IGraph;
+import main.java.IGraph;
 
 public class BFS3 {
 

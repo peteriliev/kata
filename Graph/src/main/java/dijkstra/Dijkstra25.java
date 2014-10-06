@@ -1,9 +1,9 @@
-package com.iliev.peter.kata.dijskstra;
+package main.java.dijskstra;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-import com.iliev.peter.kata.IGraph;
+import main.java.IGraph;
 
 public class Dijkstra25 {
 

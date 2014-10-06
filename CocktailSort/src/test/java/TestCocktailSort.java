@@ -1,16 +1,17 @@
-package com.iliev.peter.kata.test;
+package test.java;
 
 import static org.junit.Assert.assertTrue;
 
 import java.rmi.RemoteException;
 import java.util.Arrays;
 
+import main.java.CocktailSort;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import com.google.inject.Inject;
 import com.iliev.peter.guice.GuiceIntegration;
-import com.iliev.peter.kata.CocktailSort28;
 import com.iliev.peter.kata.conventions.ISortTestSet;
 import com.iliev.peter.kata.utils.ArrayComparer;
 import com.iliev.peter.kata.utils.ITestSetProvider;
@@ -34,7 +35,7 @@ public class TestCocktailSort {
 				System.out.printf("Sorted = %s\tunsorted = %s\n",
 						Arrays.toString(sortedSet), Arrays.toString(unsorted));
 
-				CocktailSort28.sort(unsorted);
+				CocktailSort.sort(unsorted);
 				assertTrue(
 						String.format("Sorting %s failed",
 								Arrays.toString(unsorted)),

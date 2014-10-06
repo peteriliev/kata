@@ -1,4 +1,4 @@
-package com.iliev.peter.kata;
+package main.java;
 
 import com.iliev.peter.kata.utils.Swapper;
 

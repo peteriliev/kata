@@ -1,7 +1,8 @@
 package com.iliev.peter.guice;
 
+import main.java.RandomTestSetProdiver;
+
 import com.google.inject.AbstractModule;
-import com.iliev.peter.kata.RandomTestSetProdiver;
 import com.iliev.peter.kata.utils.ITestSetProvider;
 
 public class GuiceModule extends AbstractModule {

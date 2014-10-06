@@ -1,4 +1,4 @@
-package com.iliev.peter.kata;
+package main.java;
 
 public class BubbleSort5 {
 

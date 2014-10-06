@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 import java.rmi.RemoteException;
 import java.util.Arrays;
 
-import main.java.FlagSort28;
+import main.java.FlagSort;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,55 +25,55 @@ public class FlagSortTest {
 	@Test
 	public void test_001() throws Exception
 	{
-		assertTrue(FlagSort28.getDigit(1, 1) == 1);
+		assertTrue(FlagSort.getDigit(1, 1) == 1);
 	}
 
 	@Test
 	public void test_002() throws Exception
 	{
-		assertTrue(FlagSort28.getDigit(1, 10) == 0);
+		assertTrue(FlagSort.getDigit(1, 10) == 0);
 	}
 
 	@Test
 	public void test_003() throws Exception
 	{
-		assertTrue(FlagSort28.getDigit(11, 10) == 1);
+		assertTrue(FlagSort.getDigit(11, 10) == 1);
 	}
 
 	@Test
 	public void test_004() throws Exception
 	{
-		assertTrue(FlagSort28.getDigit(777, 100) == 7);
+		assertTrue(FlagSort.getDigit(777, 100) == 7);
 	}
 
 	@Test
 	public void test_006() throws Exception
 	{
-		assertTrue(FlagSort28.getDigit(777, 1000) == 0);
+		assertTrue(FlagSort.getDigit(777, 1000) == 0);
 	}
 
 	@Test
 	public void test_007() throws Exception
 	{
-		assertTrue(FlagSort28.getDigit(770, 1) == 0);
+		assertTrue(FlagSort.getDigit(770, 1) == 0);
 	}
 
 	@Test(expected = IllegalArgumentException.class)
 	public void test_008() throws Exception
 	{
-		FlagSort28.getMaxLength(null);
+		FlagSort.getMaxLength(null);
 	}
 
 	@Test
 	public void test_009() throws Exception
 	{
-		assertTrue(FlagSort28.getMaxLength(new Integer[0]) == 0);
+		assertTrue(FlagSort.getMaxLength(new Integer[0]) == 0);
 	}
 
 	@Test
 	public void test_0091() throws Exception
 	{
-		assertTrue(FlagSort28.getMaxLength(new Integer[] { 1 }) == 1);
+		assertTrue(FlagSort.getMaxLength(new Integer[] { 1 }) == 1);
 	}
 
 	@Test
@@ -89,7 +89,7 @@ public class FlagSortTest {
 				System.out
 						.printf("Sorted = %s\tunsorted = %s\n", Arrays.toString(sortedSet), Arrays.toString(unsorted));
 
-				FlagSort28.sort(unsorted);
+				FlagSort.sort(unsorted);
 				assertTrue(String.format("Sorting %s failed", Arrays.toString(unsorted)),
 						ArrayComparer.areEqualArrays(sortedSet, unsorted));
 			}

@@ -1,6 +1,6 @@
-package com.iliev.peter.kata.dfs;
+package main.java.dfs;
 
-import com.iliev.peter.kata.IGraph;
+import main.java.IGraph;
 
 public class DFS27 {
 

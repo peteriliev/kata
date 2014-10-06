@@ -5,12 +5,13 @@ import static org.junit.Assert.assertTrue;
 import java.rmi.RemoteException;
 import java.util.Arrays;
 
+import main.java.CountingSort26;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import com.google.inject.Inject;
 import com.iliev.peter.guice.GuiceIntegration;
-import com.iliev.peter.kata.CountingSort26;
 import com.iliev.peter.kata.conventions.ISortTestSet;
 import com.iliev.peter.kata.utils.ArrayComparer;
 import com.iliev.peter.kata.utils.ITestSetProvider;

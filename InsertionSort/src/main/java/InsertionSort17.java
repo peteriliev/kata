@@ -1,4 +1,4 @@
-package com.iliev.peter.kata;
+package main.java;
 
 public class InsertionSort17 {
 	public static <T extends Comparable<T>> void sort(final T[] a) {

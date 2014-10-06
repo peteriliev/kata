@@ -1,4 +1,4 @@
-package com.iliev.peter.kata;
+package main.java;
 
 import java.util.SortedMap;
 import java.util.TreeMap;

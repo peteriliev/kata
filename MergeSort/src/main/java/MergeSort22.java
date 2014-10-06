@@ -1,4 +1,4 @@
-package com.iliev.peter.kata;
+package main.java;
 
 public class MergeSort22 {
 	public static <T extends Comparable<T>> void sort(final T[] a)

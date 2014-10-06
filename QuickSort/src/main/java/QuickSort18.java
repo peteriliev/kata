@@ -1,4 +1,4 @@
-package com.iliev.peter.kata;
+package main.java;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
