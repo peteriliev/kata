@@ -1,11 +1,11 @@
-package com.iliev.peter.test;
+package test.java;
 
 import static org.junit.Assert.assertTrue;
 
 import java.rmi.RemoteException;
 import java.util.Arrays;
 
-import main.java.MergeSort27;
+import main.java.MergeSort30;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,8 +23,7 @@ public class TestMergeSort {
 	ITestSetProvider testProvider;
 
 	@Test
-	public void test() throws RemoteException
-	{
+	public void test() throws RemoteException {
 		ISortTestSet[] allSets = testProvider.getAll();
 
 		for (ISortTestSet set : allSets) {
@@ -32,10 +31,12 @@ public class TestMergeSort {
 			Integer[][] unsortedSets = (Integer[][]) set.getUnsortedSets();
 
 			for (Integer[] unsorted : unsortedSets) {
-				System.out.printf("Sorted %s \t\t\t\tunsorted %s\n", Arrays.toString(sortedSet),
-						Arrays.toString(unsorted));
-				MergeSort27.sort(unsorted);
-				assertTrue(String.format("Sorting %s failed", Arrays.toString(unsorted)),
+				System.out.printf("Sorted %s \t\t\t\tunsorted %s\n",
+						Arrays.toString(sortedSet), Arrays.toString(unsorted));
+				MergeSort30.sort(unsorted);
+				assertTrue(
+						String.format("Sorting %s failed",
+								Arrays.toString(unsorted)),
 						ArrayComparer.areEqualArrays(sortedSet, unsorted));
 			}
 		}
