@@ -1,11 +1,11 @@
-package com.iliev.peter.kata.test;
+package test.java;
 
 import static org.junit.Assert.assertTrue;
 
 import java.rmi.RemoteException;
 import java.util.Arrays;
 
-import main.java.RadixSort26;
+import main.java.RadixSort30;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,63 +31,63 @@ public class RadixSortTest {
 	@Test
 	public void testLS1()
 	{
-		int ls = RadixSort26.getSignificant(1, 1);
+		int ls = RadixSort30.getSignificant(1, 1);
 		assertTrue(ls == 1);
 	}
 
 	@Test
 	public void testLS2()
 	{
-		int ls = RadixSort26.getSignificant(0, 1);
+		int ls = RadixSort30.getSignificant(0, 1);
 		assertTrue(ls == 0);
 	}
 
 	@Test
 	public void testLS9()
 	{
-		int ls = RadixSort26.getSignificant(9, 1);
+		int ls = RadixSort30.getSignificant(9, 1);
 		assertTrue(ls == 9);
 	}
 
 	@Test
 	public void testLS10()
 	{
-		int ls = RadixSort26.getSignificant(10, 2);
+		int ls = RadixSort30.getSignificant(10, 2);
 		assertTrue(ls == 1);
 	}
 
 	@Test
 	public void testLS11()
 	{
-		int ls = RadixSort26.getSignificant(9, 2);
+		int ls = RadixSort30.getSignificant(9, 2);
 		assertTrue(ls == 0);
 	}
 
 	@Test
 	public void testLS12()
 	{
-		int ls = RadixSort26.getSignificant(234, 2);
+		int ls = RadixSort30.getSignificant(234, 2);
 		assertTrue(ls == 3);
 	}
 
 	@Test
 	public void testLS13()
 	{
-		int ls = RadixSort26.getSignificant(234, 3);
+		int ls = RadixSort30.getSignificant(234, 3);
 		assertTrue(ls == 2);
 	}
 
 	@Test
 	public void testLS999()
 	{
-		int ls = RadixSort26.getSignificant(999, 1);
+		int ls = RadixSort30.getSignificant(999, 1);
 		assertTrue(ls == 9);
 	}
 
 	@Test
 	public void testLS9991()
 	{
-		int ls = RadixSort26.getSignificant(999, 4);
+		int ls = RadixSort30.getSignificant(999, 4);
 		assertTrue(ls == 0);
 	}
 
@@ -104,7 +104,7 @@ public class RadixSortTest {
 				System.out
 						.printf("Sorted = %s\tunsorted = %s\n", Arrays.toString(sortedSet), Arrays.toString(unsorted));
 
-				RadixSort26.sort(unsorted);
+				RadixSort30.sort(unsorted);
 				assertTrue(String.format("Sorting %s failed", Arrays.toString(unsorted)),
 						ArrayComparer.areEqualArrays(sortedSet, unsorted));
 			}
