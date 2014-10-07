@@ -1,4 +1,4 @@
-package com.iliev.peter.kata.test;
+package test.java;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -7,15 +7,14 @@ import java.util.Arrays;
 
 import main.java.Graph;
 import main.java.IGraph;
-import main.java.bfs.BFS27;
+import main.java.bfs.BFS30;
 
 import org.junit.Test;
 
 public class BFSTest {
 
 	@Test
-	public void t1()
-	{
+	public void t1() {
 		final IGraph g = Graph.newInstance(0);
 		g.addEdge(0, 1);
 
@@ -23,8 +22,7 @@ public class BFSTest {
 	}
 
 	@Test
-	public void t11()
-	{
+	public void t11() {
 		final IGraph g = Graph.newInstance(0);
 		g.addEdge(0, 1);
 
@@ -34,8 +32,7 @@ public class BFSTest {
 	}
 
 	@Test
-	public void t12()
-	{
+	public void t12() {
 		final IGraph g = Graph.newInstance(0);
 		g.addEdge(0, 1, 13);
 
@@ -48,16 +45,14 @@ public class BFSTest {
 	}
 
 	@Test
-	public void t2()
-	{
+	public void t2() {
 		final IGraph g = Graph.newInstance(0);
 
 		assertFalse(g.isEdge(0, 1));
 	}
 
 	@Test
-	public void t3()
-	{
+	public void t3() {
 		final IGraph g = Graph.newInstance(0);
 
 		g.addEdge(0, 1);
@@ -65,8 +60,7 @@ public class BFSTest {
 	}
 
 	@Test
-	public void t4()
-	{
+	public void t4() {
 		final IGraph g = Graph.newInstance(19);
 
 		myAdd(g, 2, 11);
@@ -99,7 +93,7 @@ public class BFSTest {
 		myAdd(g, 16, 17);
 		myAdd(g, 17, 18);
 
-		final int[] result = BFS27.bfs(g, 0);
+		final int[] result = BFS30.bfs(g, 0);
 		System.out.println(Arrays.toString(result));
 
 		assertTrue(areConnected(result, 0, 0));
@@ -116,8 +110,7 @@ public class BFSTest {
 		assertFalse(areConnected(result, 17, 19));
 	}
 
-	private static boolean areConnected(final int[] pred, final int u, final int v)
-	{
+	private static boolean areConnected(final int[] pred, final int u, final int v) {
 		if (u >= pred.length || v >= pred.length) {
 			return false;
 		}
@@ -128,8 +121,7 @@ public class BFSTest {
 		return rootU == rootV;
 	}
 
-	private static int getRoot(final int[] pred, final int vertex)
-	{
+	private static int getRoot(final int[] pred, final int vertex) {
 		int foo = vertex;
 
 		while (foo != pred[foo]) {
@@ -139,8 +131,7 @@ public class BFSTest {
 		return foo;
 	}
 
-	private static void myAdd(final IGraph graph, final int u, final int v)
-	{
+	private static void myAdd(final IGraph graph, final int u, final int v) {
 		graph.addEdge(u, v);
 		graph.addEdge(v, u);
 	}
