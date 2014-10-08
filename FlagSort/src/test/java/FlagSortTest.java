@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 import java.rmi.RemoteException;
 import java.util.Arrays;
 
-import main.java.FlagSort;
+import main.java.FlagSort30;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,62 +23,52 @@ public class FlagSortTest {
 	ITestSetProvider testProvider;
 
 	@Test
-	public void test_001() throws Exception
-	{
-		assertTrue(FlagSort.getDigit(1, 1) == 1);
+	public void test_001() throws Exception {
+		assertTrue(FlagSort30.getDigit(1, 1) == 1);
 	}
 
 	@Test
-	public void test_002() throws Exception
-	{
-		assertTrue(FlagSort.getDigit(1, 10) == 0);
+	public void test_002() throws Exception {
+		assertTrue(FlagSort30.getDigit(1, 10) == 0);
 	}
 
 	@Test
-	public void test_003() throws Exception
-	{
-		assertTrue(FlagSort.getDigit(11, 10) == 1);
+	public void test_003() throws Exception {
+		assertTrue(FlagSort30.getDigit(11, 10) == 1);
 	}
 
 	@Test
-	public void test_004() throws Exception
-	{
-		assertTrue(FlagSort.getDigit(777, 100) == 7);
+	public void test_004() throws Exception {
+		assertTrue(FlagSort30.getDigit(777, 100) == 7);
 	}
 
 	@Test
-	public void test_006() throws Exception
-	{
-		assertTrue(FlagSort.getDigit(777, 1000) == 0);
+	public void test_006() throws Exception {
+		assertTrue(FlagSort30.getDigit(777, 1000) == 0);
 	}
 
 	@Test
-	public void test_007() throws Exception
-	{
-		assertTrue(FlagSort.getDigit(770, 1) == 0);
+	public void test_007() throws Exception {
+		assertTrue(FlagSort30.getDigit(770, 1) == 0);
 	}
 
 	@Test(expected = IllegalArgumentException.class)
-	public void test_008() throws Exception
-	{
-		FlagSort.getMaxLength(null);
+	public void test_008() throws Exception {
+		FlagSort30.getMaxLength(null);
 	}
 
 	@Test
-	public void test_009() throws Exception
-	{
-		assertTrue(FlagSort.getMaxLength(new Integer[0]) == 0);
+	public void test_009() throws Exception {
+		assertTrue(FlagSort30.getMaxLength(new Integer[0]) == 0);
 	}
 
 	@Test
-	public void test_0091() throws Exception
-	{
-		assertTrue(FlagSort.getMaxLength(new Integer[] { 1 }) == 1);
+	public void test_0091() throws Exception {
+		assertTrue(FlagSort30.getMaxLength(new Integer[] { 1 }) == 1);
 	}
 
 	@Test
-	public void test() throws RemoteException
-	{
+	public void test() throws RemoteException {
 		ISortTestSet[] sets = testProvider.getAll();
 
 		for (ISortTestSet set : sets) {
@@ -86,11 +76,13 @@ public class FlagSortTest {
 			Integer[][] unsortedSets = (Integer[][]) set.getUnsortedSets();
 
 			for (Integer[] unsorted : unsortedSets) {
-				System.out
-						.printf("Sorted = %s\tunsorted = %s\n", Arrays.toString(sortedSet), Arrays.toString(unsorted));
+				System.out.printf("Sorted = %s\tunsorted = %s\n",
+						Arrays.toString(sortedSet), Arrays.toString(unsorted));
 
-				FlagSort.sort(unsorted);
-				assertTrue(String.format("Sorting %s failed", Arrays.toString(unsorted)),
+				FlagSort30.sort(unsorted);
+				assertTrue(
+						String.format("Sorting %s failed",
+								Arrays.toString(unsorted)),
 						ArrayComparer.areEqualArrays(sortedSet, unsorted));
 			}
 		}

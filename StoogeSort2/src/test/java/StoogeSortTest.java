@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 import java.rmi.RemoteException;
 import java.util.Arrays;
 
-import main.java.StoogeSort28;
+import main.java.StoogeSort30;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,8 +23,7 @@ public class StoogeSortTest {
 	ITestSetProvider testProvider;
 
 	@Test
-	public void test() throws RemoteException
-	{
+	public void test() throws RemoteException {
 		final ISortTestSet[] allSets = testProvider.getAll();
 
 		for (ISortTestSet set : allSets) {
@@ -32,10 +31,12 @@ public class StoogeSortTest {
 			Integer[][] unsortedSets = (Integer[][]) set.getUnsortedSets();
 
 			for (Integer[] unsorted : unsortedSets) {
-				System.out.printf("Sorted %s \t\t\t\tunsorted %s\n", Arrays.toString(sortedSet),
-						Arrays.toString(unsorted));
-				StoogeSort28.sort(unsorted);
-				assertTrue(String.format("Sorting %s failed", Arrays.toString(unsorted)),
+				System.out.printf("Sorted %s \t\t\t\tunsorted %s\n",
+						Arrays.toString(sortedSet), Arrays.toString(unsorted));
+				StoogeSort30.sort(unsorted);
+				assertTrue(
+						String.format("Sorting %s failed",
+								Arrays.toString(unsorted)),
 						ArrayComparer.areEqualArrays(sortedSet, unsorted));
 			}
 		}
