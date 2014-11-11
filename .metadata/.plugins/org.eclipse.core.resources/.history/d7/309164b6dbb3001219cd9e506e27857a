@@ -1,9 +1,0 @@
-package com.piliev;
-
-public class FakeFoo implements Foo {
-
-	@Override
-	public String getFoo() {
-		return "Fake Foo - Hello!"
-	}
-}

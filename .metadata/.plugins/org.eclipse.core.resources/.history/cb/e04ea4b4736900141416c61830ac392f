@@ -1,0 +1,10 @@
+package main.java;
+
+public class BubbleSort31 {
+
+	public static <T extends Comparable<T>> void sort(final T[] a) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

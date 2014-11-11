@@ -1,0 +1,20 @@
+package main.java;
+
+public class SelectionSort31 {
+
+	public static <T extends Comparable<T>> void sort(final T[] a) {
+		
+		
+		for (int i = a.length; i > 0; i--) {
+			int maxIndex = i;
+			
+			for (int j = i; j > 0; j--)
+			{
+				if (a[j].compareTo(a[maxIndex]) > 0)
+				{
+					maxIndex = j;
+				}
+			}
+		}
+	}
+}

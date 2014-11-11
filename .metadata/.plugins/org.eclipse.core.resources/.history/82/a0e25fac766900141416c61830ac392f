@@ -1,0 +1,17 @@
+package main.java;
+
+public class InsertionSort31 {
+
+	public static <T extends Comparable<T>> void sort(final T[] a) {
+		for (int i = a.length - 1; i > 0; i--) {
+			final T insertMe = a[i];
+			int index = i - 1;
+			while (index < a.length && a[index].compareTo(insertMe) > 0) {
+				a[index - 1] = a[index];
+				index++;
+			}
+
+			a[index + 1] = insertMe;
+		}
+	}
+}

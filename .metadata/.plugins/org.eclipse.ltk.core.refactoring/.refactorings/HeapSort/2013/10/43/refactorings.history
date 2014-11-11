@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename field &apos;EMPTY_INDEX&apos; in &apos;com.iliev.peter.kata.HeapSort22&apos; to &apos;NULL_INDEX&apos;&#x0D;&#x0A;- Original project: &apos;HeapSort&apos;&#x0D;&#x0A;- Original element: &apos;com.iliev.peter.kata.HeapSort22.EMPTY_INDEX&apos;&#x0D;&#x0A;- Renamed element: &apos;com.iliev.peter.kata.HeapSort22.NULL_INDEX&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;EMPTY_INDEX&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;com.iliev.peter.kata{HeapSort22.java[HeapSort22^EMPTY_INDEX" name="NULL_INDEX" references="true" setter="false" stamp="1382378668050" textual="false" version="1.0"/>
-</session>

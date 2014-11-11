@@ -1,0 +1,8 @@
+package main.java;
+
+public class InsertionSort31 {
+
+	public static void sort(Integer[] unsorted) {
+		
+	}
+}

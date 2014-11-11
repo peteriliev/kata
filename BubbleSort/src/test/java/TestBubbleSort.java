@@ -1,11 +1,11 @@
-package com.iliev.peter.kata.test;
+package test.java;
 
 import static org.junit.Assert.assertTrue;
 
 import java.rmi.RemoteException;
 import java.util.Arrays;
 
-import main.java.BubbleSort26;
+import main.java.BubbleSort31;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,19 +23,21 @@ public class TestBubbleSort {
 	ITestSetProvider testProvider;
 
 	@Test
-	public void test2() throws RemoteException
-	{
+	public void test2() throws RemoteException {
 		final ISortTestSet[] allSets = testProvider.getAll();
 
 		for (final ISortTestSet set : allSets) {
 			final Integer[] sortedSet = (Integer[]) set.getSortedSet();
-			final Integer[][] unsortedSets = (Integer[][]) set.getUnsortedSets();
+			final Integer[][] unsortedSets = (Integer[][]) set
+					.getUnsortedSets();
 
 			for (final Integer[] unsorted : unsortedSets) {
-				System.out.printf("Sorted %s \t\t\t\tunsorted %s\n", Arrays.toString(sortedSet),
-						Arrays.toString(unsorted));
-				BubbleSort26.sort(unsorted);
-				assertTrue(String.format("Sorting %s failed", Arrays.toString(unsorted)),
+				System.out.printf("Sorted %s \t\t\t\tunsorted %s\n",
+						Arrays.toString(sortedSet), Arrays.toString(unsorted));
+				BubbleSort31.sort(unsorted);
+				assertTrue(
+						String.format("Sorting %s failed",
+								Arrays.toString(unsorted)),
 						ArrayComparer.areEqualArrays(sortedSet, unsorted));
 			}
 		}

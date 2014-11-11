@@ -1,4 +1,4 @@
-activeuserprofiles=PC2011;Team
+activeuserprofiles=AFW8878;Team
 eclipse.preferences.version=1
-org.eclipse.rse.systemtype.local.systemType.defaultUserId=Admin
-useridperkey=PC2011.Local\=Admin;
+org.eclipse.rse.systemtype.local.systemType.defaultUserId=peteri
+useridperkey=AFW8878.Local\=peteri;

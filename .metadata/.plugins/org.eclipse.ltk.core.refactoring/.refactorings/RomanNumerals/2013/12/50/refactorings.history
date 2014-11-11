@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;com.iliev.peter.kata.Decinal2Roman25&apos; to &apos;Decimal2Roman25&apos;&#x0D;&#x0A;- Original project: &apos;RomanNumerals&apos;&#x0D;&#x0A;- Original element: &apos;com.iliev.peter.kata.Decinal2Roman25&apos;&#x0D;&#x0A;- Renamed element: &apos;com.iliev.peter.kata.Decimal2Roman25&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Decinal2Roman25&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.iliev.peter.kata{Decinal2Roman25.java[Decinal2Roman25" matchStrategy="1" name="Decimal2Roman25" qualified="false" references="true" similarDeclarations="false" stamp="1386571422112" textual="false" version="1.0"/>
-</session>

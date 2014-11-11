@@ -1,9 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-<typeInfo handle="=CountingSort/src&lt;com.iliev.peter.kata{CountingSort14.java[CountingSort14" modifiers="1" timestamp="1366652842220"/>
-<typeInfo handle="=SortTestSets/src&lt;com.iliev.peter.kata.conventions{ISortTestSet.java[ISortTestSet" modifiers="513" timestamp="1367320800121"/>
-<typeInfo handle="=RadixSort/src&lt;com.iliev.peter.kata{RadixSort22.java[RadixSort22" modifiers="1" timestamp="1382293760193"/>
-<typeInfo handle="=ExternalSort/C:\/Program Files\/Java\/jdk1.8.0\/jre\/lib\/ext\/nashorn.jar&lt;jdk.nashorn.internal.objects.annotations(Function.class[Function" modifiers="9729" timestamp="1388647858339"/>
-<typeInfo handle="=ExternalSort/C:\/Program Files\/Java\/jdk1.8.0\/jre\/lib\/rt.jar&lt;java.time(Clock.class[Clock" modifiers="1025" timestamp="1388647866900"/>
-<typeInfo handle="=ExternalSort/C:\/Program Files\/Java\/jdk1.8.0\/jre\/lib\/rt.jar&lt;com.sun.org.apache.xalan.internal.xsltc.compiler(Predicate.class[Predicate" modifiers="16" timestamp="1388647866900"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>

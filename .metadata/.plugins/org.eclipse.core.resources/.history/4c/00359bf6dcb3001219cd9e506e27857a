@@ -1,5 +1,0 @@
-package com.piliev;
-
-public interface MyService {
-	String m1(final Foo foo, final Bar bar);
-}

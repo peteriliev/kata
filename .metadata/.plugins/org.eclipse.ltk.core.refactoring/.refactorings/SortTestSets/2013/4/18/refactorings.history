@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;ISortTestSet.java&apos; to &apos;utils&apos;&#x0D;&#x0A;- Original project: &apos;SortTestSets&apos;&#x0D;&#x0A;- Destination element: &apos;utils&apos;&#x0D;&#x0A;- Original element: &apos;com.iliev.peter.kata.conventions.ISortTestSet.java&apos;" description="Copy compilation unit" element1="/src&lt;com.iliev.peter.kata.conventions{ISortTestSet.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1367352133761" target="/WS/TARGET_SERVICE/src/com/iliev/peter/kata/utils" units="1" version="1.0"/>
-</session>
