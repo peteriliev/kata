@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 import java.rmi.RemoteException;
 import java.util.Arrays;
 
-import main.java.InsertionSort31;
+import main.java.InsertionSort32;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,14 +31,10 @@ public class TestInsertionSort {
 			Integer[][] unsortedSets = (Integer[][]) set.getUnsortedSets();
 
 			for (Integer[] unsorted : unsortedSets) {
-				System.out.printf("Sorted = %s\tunsorted = %s\n",
-						Arrays.toString(sortedSet), Arrays.toString(unsorted));
+				System.out.printf("Sorted = %s\tunsorted = %s\n", Arrays.toString(sortedSet), Arrays.toString(unsorted));
 
-				InsertionSort31.sort(unsorted);
-				assertTrue(
-						String.format("Sorting %s failed",
-								Arrays.toString(unsorted)),
-						ArrayComparer.areEqualArrays(sortedSet, unsorted));
+				InsertionSort32.sort(unsorted);
+				assertTrue(String.format("Sorting %s failed", Arrays.toString(unsorted)), ArrayComparer.areEqualArrays(sortedSet, unsorted));
 			}
 		}
 	}
