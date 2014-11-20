@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 import java.rmi.RemoteException;
 import java.util.Arrays;
 
-import main.java.StoogeSort30;
+import main.java.StoogeSort31;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,13 +31,9 @@ public class StoogeSortTest {
 			Integer[][] unsortedSets = (Integer[][]) set.getUnsortedSets();
 
 			for (Integer[] unsorted : unsortedSets) {
-				System.out.printf("Sorted %s \t\t\t\tunsorted %s\n",
-						Arrays.toString(sortedSet), Arrays.toString(unsorted));
-				StoogeSort30.sort(unsorted);
-				assertTrue(
-						String.format("Sorting %s failed",
-								Arrays.toString(unsorted)),
-						ArrayComparer.areEqualArrays(sortedSet, unsorted));
+				System.out.printf("Sorted %s \t\t\t\tunsorted %s\n", Arrays.toString(sortedSet), Arrays.toString(unsorted));
+				StoogeSort31.sort(unsorted);
+				assertTrue(String.format("Sorting %s failed", Arrays.toString(unsorted)), ArrayComparer.areEqualArrays(sortedSet, unsorted));
 			}
 		}
 
