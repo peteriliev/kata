@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 import java.rmi.RemoteException;
 import java.util.Arrays;
 
-import main.java.HeapSort31;
+import main.java.HeapSort33;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,8 +23,7 @@ public class TestHeapSort2 {
 	ITestSetProvider testProvider;
 
 	@Test
-	public void test() throws RemoteException
-	{
+	public void test() throws RemoteException {
 		ISortTestSet[] sets = testProvider.getAll();
 
 		for (ISortTestSet set : sets) {
@@ -32,14 +31,11 @@ public class TestHeapSort2 {
 			Integer[][] unsortedSets = (Integer[][]) set.getUnsortedSets();
 
 			for (Integer[] unsorted : unsortedSets) {
-				System.out
-						.printf("Sorted = %s\tunsorted = %s\n", Arrays.toString(sortedSet), Arrays.toString(unsorted));
+				System.out.printf("Sorted = %s\tunsorted = %s\n", Arrays.toString(sortedSet), Arrays.toString(unsorted));
 				Integer[] foo = Arrays.copyOf(unsorted, unsorted.length);
-				HeapSort31.sort(unsorted);
+				HeapSort33.sort(unsorted);
 
-				assertTrue(
-						String.format("Sorting %s failed (was %s, expected %s)", Arrays.toString(foo),
-								Arrays.toString(unsorted), Arrays.toString(sortedSet)),
+				assertTrue(String.format("Sorting %s failed (was %s, expected %s)", Arrays.toString(foo), Arrays.toString(unsorted), Arrays.toString(sortedSet)),
 						ArrayComparer.areEqualArrays(sortedSet, unsorted));
 			}
 		}

@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 import java.rmi.RemoteException;
 import java.util.Arrays;
 
-import main.java.QuickSort31;
+import main.java.QuickSort33;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,8 +23,7 @@ public class TestQuickSort {
 	ITestSetProvider testProvider;
 
 	@Test
-	public void test0() throws RemoteException
-	{
+	public void test0() throws RemoteException {
 		final ISortTestSet[] sets = testProvider.getAll();
 
 		for (final ISortTestSet set : sets) {
@@ -32,12 +31,10 @@ public class TestQuickSort {
 			final Integer[][] unsortedSets = (Integer[][]) set.getUnsortedSets();
 
 			for (final Integer[] unsorted : unsortedSets) {
-				System.out
-						.printf("Sorted = %s\tunsorted = %s\n", Arrays.toString(sortedSet), Arrays.toString(unsorted));
+				System.out.printf("Sorted = %s\tunsorted = %s\n", Arrays.toString(sortedSet), Arrays.toString(unsorted));
 
-				QuickSort31.sort(unsorted);
-				assertTrue(String.format("Sorting %s failed", Arrays.toString(unsorted)),
-						ArrayComparer.areEqualArrays(sortedSet, unsorted));
+				QuickSort33.sort(unsorted);
+				assertTrue(String.format("Sorting %s failed", Arrays.toString(unsorted)), ArrayComparer.areEqualArrays(sortedSet, unsorted));
 			}
 		}
 	}
