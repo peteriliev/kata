@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 import java.rmi.RemoteException;
 import java.util.Arrays;
 
-import main.java.ShellSort31;
+import main.java.ShellSort32;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,20 +23,22 @@ public class TestShellSort {
 	ITestSetProvider testProvider;
 
 	@Test
-	public void test() throws RemoteException
-	{
+	public void test() throws RemoteException {
 		final ISortTestSet[] sets = testProvider.getAll();
 
 		for (final ISortTestSet set : sets) {
 			final Integer[] sortedSet = (Integer[]) set.getSortedSet();
-			final Integer[][] unsortedSets = (Integer[][]) set.getUnsortedSets();
+			final Integer[][] unsortedSets = (Integer[][]) set
+					.getUnsortedSets();
 
 			for (final Integer[] unsorted : unsortedSets) {
-				System.out
-						.printf("Sorted = %s\tunsorted = %s\n", Arrays.toString(sortedSet), Arrays.toString(unsorted));
+				System.out.printf("Sorted = %s\tunsorted = %s\n",
+						Arrays.toString(sortedSet), Arrays.toString(unsorted));
 
-				ShellSort31.sort(unsorted);
-				assertTrue(String.format("Sorting %s failed", Arrays.toString(unsorted)),
+				ShellSort32.sort(unsorted);
+				assertTrue(
+						String.format("Sorting %s failed",
+								Arrays.toString(unsorted)),
 						ArrayComparer.areEqualArrays(sortedSet, unsorted));
 			}
 		}
