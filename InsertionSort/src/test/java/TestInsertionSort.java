@@ -6,6 +6,7 @@ import java.rmi.RemoteException;
 import java.util.Arrays;
 
 import main.java.InsertionSort32;
+import main.java.InsertionSort33;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -33,7 +34,7 @@ public class TestInsertionSort {
 			for (Integer[] unsorted : unsortedSets) {
 				System.out.printf("Sorted = %s\tunsorted = %s\n", Arrays.toString(sortedSet), Arrays.toString(unsorted));
 
-				InsertionSort32.sort(unsorted);
+				InsertionSort33.sort(unsorted);
 				assertTrue(String.format("Sorting %s failed", Arrays.toString(unsorted)), ArrayComparer.areEqualArrays(sortedSet, unsorted));
 			}
 		}

@@ -6,6 +6,7 @@ import java.rmi.RemoteException;
 import java.util.Arrays;
 
 import main.java.BubbleSort32;
+import main.java.BubbleSort33;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,7 +33,7 @@ public class TestBubbleSort {
 
 			for (final Integer[] unsorted : unsortedSets) {
 				System.out.printf("Sorted %s \t\t\t\tunsorted %s\n", Arrays.toString(sortedSet), Arrays.toString(unsorted));
-				BubbleSort32.sort(unsorted);
+				BubbleSort33.sort(unsorted);
 				assertTrue(String.format("Sorting %s failed", Arrays.toString(unsorted)), ArrayComparer.areEqualArrays(sortedSet, unsorted));
 			}
 		}

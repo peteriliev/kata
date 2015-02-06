@@ -30,7 +30,7 @@ public class FloydTest {
 		g.addEdge(2, 3, 5);
 		g.addEdge(2, 4, 1);
 
-		g.addEdge(3, 1, 8);
+		g.addEdge(3, 0, 8);
 
 		g.addEdge(4, 3, 7);
 
