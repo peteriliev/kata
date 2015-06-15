@@ -5,8 +5,8 @@ import static org.junit.Assert.assertTrue;
 import java.rmi.RemoteException;
 import java.util.Arrays;
 
-import main.java.BucketSort31;
-import main.java.InsertionSort31;
+import main.java.BucketSort39;
+import main.java.InsertionSort39;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,37 +25,37 @@ public class BucketSortTest {
 
 	@Test
 	public void test1() {
-		assertTrue(BucketSort31.calcNumBuckets(1, 100) == 1);
+		assertTrue(BucketSort39.calcNumBuckets(1, 100) == 1);
 	}
 
 	@Test
 	public void test2() {
-		assertTrue(BucketSort31.calcNumBuckets(0, 100) == 0);
+		assertTrue(BucketSort39.calcNumBuckets(0, 100) == 0);
 	}
 
 	@Test
 	public void test4() {
-		assertTrue(BucketSort31.calcNumBuckets(3, 2) == 2);
+		assertTrue(BucketSort39.calcNumBuckets(3, 2) == 2);
 	}
 
 	@Test
 	public void test5() {
-		assertTrue(BucketSort31.calcNumBuckets(2, 2) == 1);
+		assertTrue(BucketSort39.calcNumBuckets(2, 2) == 1);
 	}
 
 	@Test
 	public void test6() {
-		assertTrue(BucketSort31.calcNumBuckets(4, 2) == 2);
+		assertTrue(BucketSort39.calcNumBuckets(4, 2) == 2);
 	}
 
 	@Test
 	public void test7() {
-		assertTrue(BucketSort31.calcNumBuckets(100, 3) == 34);
+		assertTrue(BucketSort39.calcNumBuckets(100, 3) == 34);
 	}
 
 	@Test
 	public void test8() {
-		assertTrue(BucketSort31.calcNumBuckets(101, 50) == 3);
+		assertTrue(BucketSort39.calcNumBuckets(101, 50) == 3);
 	}
 
 	@Test
@@ -67,10 +67,14 @@ public class BucketSortTest {
 			Integer[][] unsortedSets = (Integer[][]) set.getUnsortedSets();
 
 			for (Integer[] unsorted : unsortedSets) {
-				System.out.printf("Sorted = %s\tunsorted = %s\n", Arrays.toString(sortedSet), Arrays.toString(unsorted));
+				System.out.printf("Sorted = %s\tunsorted = %s\n",
+						Arrays.toString(sortedSet), Arrays.toString(unsorted));
 
-				BucketSort31.sort(unsorted);
-				assertTrue(String.format("Sorting %s failed", Arrays.toString(unsorted)), ArrayComparer.areEqualArrays(sortedSet, unsorted));
+				BucketSort39.sort(unsorted);
+				assertTrue(
+						String.format("Sorting %s failed",
+								Arrays.toString(unsorted)),
+						ArrayComparer.areEqualArrays(sortedSet, unsorted));
 			}
 		}
 	}
@@ -84,10 +88,14 @@ public class BucketSortTest {
 			Integer[][] unsortedSets = (Integer[][]) set.getUnsortedSets();
 
 			for (Integer[] unsorted : unsortedSets) {
-				System.out.printf("Sorted = %s\tunsorted = %s\n", Arrays.toString(sortedSet), Arrays.toString(unsorted));
+				System.out.printf("Sorted = %s\tunsorted = %s\n",
+						Arrays.toString(sortedSet), Arrays.toString(unsorted));
 
-				InsertionSort31.sort(unsorted, 0, unsorted.length - 1);
-				assertTrue(String.format("Sorting %s failed", Arrays.toString(unsorted)), ArrayComparer.areEqualArrays(sortedSet, unsorted));
+				InsertionSort39.sort(unsorted, 0, unsorted.length - 1);
+				assertTrue(
+						String.format("Sorting %s failed",
+								Arrays.toString(unsorted)),
+						ArrayComparer.areEqualArrays(sortedSet, unsorted));
 			}
 		}
 	}

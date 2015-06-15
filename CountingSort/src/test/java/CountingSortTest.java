@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 import java.rmi.RemoteException;
 import java.util.Arrays;
 
-import main.java.CountingSort30;
+import main.java.CountingSort39;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -34,7 +34,7 @@ public class CountingSortTest {
 				System.out.printf("Sorted = %s\tunsorted = %s\n",
 						Arrays.toString(sortedSet), Arrays.toString(unsorted));
 
-				CountingSort30.sort(unsorted);
+				CountingSort39.sort(unsorted);
 				assertTrue(
 						String.format("Sorting %s failed",
 								Arrays.toString(unsorted)),
