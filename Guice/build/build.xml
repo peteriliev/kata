@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<project name="Bubble Sort Build" default="main" basedir=".">
-	<property file="local.properties" />
-	<property file="${master.properties.file}" />
-	<import file="${master.build.file}" />
-</project>
